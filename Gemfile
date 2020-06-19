@@ -23,8 +23,6 @@ gem 'haml-rails'
 gem 'devise'
 #Protocolo para permisos de autenticación
 gem 'omniauth-facebook'
-# Gema para manejar el grid
-gem 'flexbox-rails', '~> 1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

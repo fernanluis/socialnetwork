@@ -3,7 +3,6 @@ class MainController < ApplicationController
   end
 
   def unregistered
-
   end
-  
+
 end
