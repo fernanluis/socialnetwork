@@ -5,6 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,:omniauthable,
          :omniauth_providers => [:facebook]
 
+  # Username no puede ser nulo ni estar vacío porque no pasaría la validación.
+  # Campo username va a ser único a través de toda la tabla.
+  validates :username, presence: true, uniqueness: true, length: {in: 3..12}
+
   def self.from_omniauth(auth)
     where(provider: auth[:provider], uid: auth[:uid]).first_or_create do |user|
       if auth[:info]
