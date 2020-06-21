@@ -1,12 +1,11 @@
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  = devise_error_messages!
 
-  = f.email_field :email, autofocus: true, autocomplete: "email"
   = f.label :email
+  = f.email_field :email, autofocus: true, autocomplete: "email"
 
-  = f.password_field :password, autocomplete: "current-password"
   = f.label :password
+  = f.password_field :password, autocomplete: "current-password"
 
-  = f.submit "Iniciar sesión"
+  = f.submit "Iniciar session"
 
-  =link_to "Crear registro", new_user_registration_path
+  = render "devise/shared/links"
