@@ -10,6 +10,8 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: {in: 3..12}
   validate :validate_username_regex
 
+  has_many :posts # Generamos la relación uno a muchos.
+
   def self.from_omniauth(auth)
     where(provider: auth[:provider], uid: auth[:uid]).first_or_create do |user|
       if auth[:info]
