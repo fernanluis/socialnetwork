@@ -23,6 +23,8 @@ gem 'haml-rails'
 gem 'devise'
 #Protocolo para permisos de autenticación
 gem 'omniauth-facebook'
+# Anota modelos Rails / ActiveRecord, rutas, accesorios y otros según el esquema de la base de datos.
+gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
