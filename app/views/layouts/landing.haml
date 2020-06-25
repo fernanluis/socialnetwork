@@ -5,14 +5,14 @@
     = csrf_meta_tags
     = csp_meta_tag
 
-    %link{rel:"stylesheet", href:"https://code.getmdl.io/1.3.0/material.red-deep_purple.min.css"}
+    %link{rel:"stylesheet", href:"https://code.getmdl.io/1.3.0/material.green-indigo.min.css"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     %script{defer:true, src:"https://code.getmdl.io/1.3.0/material.min.js"}
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
   Este es el landing
-  %p
+  %p{style:"#{'display:none;' if notice.nil? && alert.nil?}"}
     = notice
     = alert
   = yield

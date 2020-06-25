@@ -1,0 +1,7 @@
+%header.mdl-layout__header.mdl-layout__header--scroll
+  .mdl-layout__header-row
+    %span.mdl-layout-title=link_to "GitHub", href="https://github.com/fernanluis", class:"white-text",style:"text-decoration:none;"
+    .mdl-layout-spacer
+    %nav.mdl-navigation
+      -if user_signed_in?
+        =link_to "Cerrar sesión",destroy_user_session_path, method: :delete
