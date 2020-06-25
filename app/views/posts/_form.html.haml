@@ -6,11 +6,9 @@
         - @post.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :body
-    = f.text_area :body
-  .field
-    = f.label :user
-    = f.text_field :user
+  .mdl-textfield.mdl-js-textfield
+    = f.label :body,"Comparte con la comunidad", class:"mdl-textfield_label"
+    = f.text_area :body, class: "mdl-textfield_input", rows: "3"
+
   .actions
-    = f.submit 'Save'
+    = f.submit 'Publicar', class:"mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
