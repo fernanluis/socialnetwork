@@ -1,0 +1,40 @@
+
+  <h4>
+    <%= @user.username%>
+    <br>
+    <br>
+    <%= @user.name%>
+    <%= @user.last_name%>
+  </h4>
+  <h4>
+  Seguidores
+  </h4>
+  <h4>
+  Publicaciones
+    <%= @user.posts.count%>
+  </h4>
+  <h4>
+  Bio:
+    <%= @user.bio%>
+  </h4>
+
+<%= form_with model: @user, local: true do |form| %>
+<br>
+  <%= form.label :username%>
+  <%= form.text_field :username%>
+  <br>
+  <br>
+  <%= form.label :name%>
+  <%= form.text_field :name%>
+  <br>
+  <br>
+  <%= form.label :last_name%>
+  <%= form.text_field :last_name%>
+  <br>
+  <br>
+  <%= form.label :bio%>
+  <%= form.text_area :bio%>
+  <br>
+  <br>
+  <%= form.submit "Enviar"%>
+<%end%>

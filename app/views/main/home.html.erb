@@ -1,0 +1,22 @@
+<h1> Bienvenidos a la página </h1>
+
+<%= link_to "Primer link", "#"%>
+<%= link_to "Segundo link", "#"%>
+
+<div id="new-post">
+  <%= link_to 'New Post', new_post_path, remote: true %>
+</div>
+
+<h1>Posts</h1>
+<table id="posts">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @posts %>
+  </tbody>
+</table>

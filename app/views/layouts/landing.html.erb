@@ -16,11 +16,10 @@
 
   <body>
     <div>
+      Este es el landing
       <p style="<%= 'display:none;' if notice.nil? && alert.nil? %>"><%= notice %><%= alert %></p>
-      <div class="mdl-layout mdl-js-layout">
-        <%= render "partials/nav" %>
-        <%= yield %>
-      </div>
+      <%= render "partials/nav" %>
+      <%= yield %>  
     </div>
   </body>
 </html>

@@ -1,0 +1,30 @@
+<div class="col-md-6 mx-auto mb-5">
+  <h2 class="center bold">Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|%>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+          <%= f.label :email%>
+          <%= f.email_field :email, autofocus: true, required: true, class:"mdl-textfield__input"%>
+      </div>
+      <div class="field">
+          <%= f.label :password%>
+          <%= f.password_field :password, autofocus: true%>
+      </div>
+
+      <div class="field">
+          <%= f.label :password_confirmation%>
+          <%= f.password_field :password_confirmation, class:"mdl-textfield__input"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :username%>
+        <%= f.text_field :username, autofocus: true, class:"mdl-textfield__input"%>
+      </div>
+
+      <div class="field">
+        <%= f.submit "Registrar", class:"btn btn-primary"%>
+        <%= link_to "Ya tengo cuenta", new_user_session_path%>
+      </div>
+    <%end%>
+</div>

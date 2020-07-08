@@ -1,0 +1,22 @@
+<%=form_with "/custom_sign_up", method: :post do |form|%>
+  <ul>
+    <%= @user.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+    <%end%>
+  </ul>
+  <div>
+    <%= form.text_field :username%>
+    <%= form.label :username %>
+  </div>
+  <div>
+    <%= form.email_field :email, require: true %>
+    <%= form.label :email %>
+  </div>
+  <div>
+    <%= form.text_field :name%>
+    <%= form.label :name %>
+  </div>
+  <div>
+    <%= form.submit "Complete the register" %>
+  </div>
+<%end%>

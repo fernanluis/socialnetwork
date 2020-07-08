@@ -13,8 +13,12 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5.2.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Escribir vistas sin cerrar las etiquetas
@@ -23,8 +27,12 @@ gem 'haml-rails'
 gem 'devise'
 #Protocolo para permisos de autenticación
 gem 'omniauth-facebook'
+# Allows access to twitter's Bootstrap framework
+gem 'bootstrap', '~> 4.5.0'
 # Anota modelos Rails / ActiveRecord, rutas, accesorios y otros según el esquema de la base de datos.
 gem 'annotate', '~> 2.7', '>= 2.7.1'
+# Best in place for better edit form
+# gem 'best_in_place', '~> 3.0.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
