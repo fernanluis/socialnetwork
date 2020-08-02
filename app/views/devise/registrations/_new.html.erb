@@ -2,29 +2,48 @@
   <h2 class="center bold">Sign up</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|%>
       <%= render "devise/shared/error_messages", resource: resource %>
-
-      <div class="field">
+      <div class="form-group row">
+        <div class="col">
+           <%= f.label :name %>
+           <%= f.text_field :name, class:"form-control col", autofocus: true, autocomplete: "name" %>
+         </div>
+        <div class="col">
+           <%= f.label :last_name %><br />
+           <%= f.text_field :last_name, class:"form-control col", autofocus: true, autocomplete: "last_name" %>
+         </div>
+      </div>
+       <div class="form-group row">
           <%= f.label :email%>
-          <%= f.email_field :email, autofocus: true, required: true, class:"mdl-textfield__input"%>
-      </div>
-      <div class="field">
-          <%= f.label :password%>
-          <%= f.password_field :password, autofocus: true%>
-      </div>
-
-      <div class="field">
+          <%= f.email_field :email, class:"form-control", autofocus: true, required: true%>
+        </div>
+        <div class="form-group row">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, class:"form-control", autofocus: true%>
+        </div>
+        <div class="form-group row">
           <%= f.label :password_confirmation%>
-          <%= f.password_field :password_confirmation, class:"mdl-textfield__input"%>
-      </div>
+          <%= f.password_field :password_confirmation, class:"form-control"%>
+        </div>
 
-      <div class="field">
-        <%= f.label :username%>
-        <%= f.text_field :username, autofocus: true, class:"mdl-textfield__input"%>
-      </div>
+        <div class="form-group row">
+          <%= f.label :username%>
+          <%= f.text_field :username, class:"form-control", autofocus: true%>
+          </div>
+        <div class="picture form-group">
+          <%= f.label :upload_your_profile_picture %><br />
+          <%= f.file_field :image, class:"form-control", class:"btn btn-outline-primary", accept: 'image/jpeg,image/gif,image/png' %>
+        </div>
 
-      <div class="field">
-        <%= f.submit "Registrar", class:"btn btn-primary"%>
-        <%= link_to "Ya tengo cuenta", new_user_session_path%>
-      </div>
+        <div class="form-group row">
+          <%= f.submit "Registrar", class:"btn btn-primary"%>
+        </div>
+        <div class="form-group row">
+           <%= link_to "Ya tengo cuenta", new_user_session_path%>
+        </div>
+
+
     <%end%>
 </div>

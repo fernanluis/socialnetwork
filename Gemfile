@@ -31,6 +31,9 @@ gem 'omniauth-facebook'
 gem 'bootstrap', '~> 4.5.0'
 # Anota modelos Rails / ActiveRecord, rutas, accesorios y otros según el esquema de la base de datos.
 gem 'annotate', '~> 2.7', '>= 2.7.1'
+# Con MiniMagick, la memoria de procesos de ruby ​​sigue siendo pequeña..
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
 # Best in place for better edit form
 # gem 'best_in_place', '~> 3.0.1'
 # Use Redis adapter to run Action Cable in production

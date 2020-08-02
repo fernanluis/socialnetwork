@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
   }
 
-  get "/custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up" #is post because we create the register
+  post "/custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up" #is post because we create the register
   # root 'main#home'
 
   authenticated :user do

@@ -1,4 +1,6 @@
-<h1> SocialNetwork </h1>
-<p> Conecta y conoce para saber de qué se trata todo esto.</p>
+<div class="col-md-6 mx-auto mb-5">
+  <h2>SocialNetwork</h2>
+    <p> Conecta y conoce para saber de qué se trata todo esto.</p>
+    <%= link_to "Cerrar cuenta", new_user_registration_path%>
+</div>
 <%= render "devise/registrations/new"%>
-<%= link_to "Cerrar cuenta", new_user_registration_path%>

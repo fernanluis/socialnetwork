@@ -1,4 +1,5 @@
 <tr>
-  <td><%= post.body %></td>
-  <td><%= time_ago_in_words(post.created_at) %></td>
+  <td><i><small><%= post.body %></small></i></td>
+  <td><i><small><%= time_ago_in_words(post.created_at) %></small></i></td>
+  <td><i><small>Created by: <%= post.user.email %></small></i></td>
 </tr>

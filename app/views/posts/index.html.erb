@@ -1,27 +1,33 @@
-<p id="notice"><%= notice %></p>
-<h1> Listing posts <h1>
-
-<table>
-  <thead>
-    <tr>
-      <th> Body <th>
-      <th> User <th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.body %></td>
-        <td><%= post.user.email %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }%></td>
-      </tr>
-    <%end%>
-  <tbody>
-</table>
 <br>
+<div class="col-md-6 mx-auto mb-5">
+  <h1 class="center bold", align="center"> Listing posts <h1>
+</div>
 
-<%= link_to 'New Post', new_post_path %>
+  <div align="center">
+    <%= link_to 'New Post', new_post_path, class:"btn btn-outline-primary" %>
+    <br>
+    <br>
+  <div class="container p-3 mb-2 bg-success rounded">
+    <table style="width:100%">
+      <thead>
+        <tr align="center">
+          <th> Body <th>
+          <th> User <th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr align="center">
+            <td><br><i><%= post.body %></i></td>
+            <td><br><i><small><%= post.user.email %></small></i></td>
+            <td><br><%= link_to 'Show', post, class:"btn btn-outline-primary" %></td>
+            <td><br><%= link_to 'Edit', edit_post_path(post), class:"btn btn-outline-primary" %></td>
+            <td><br><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-primary"%></td>
+          </tr>
+        <%end%>
+      <tbody>
+    </table>
+    <br>
+  </div>
+</div>

@@ -21,7 +21,7 @@ class Users::OmniauthCallbacksController < ApplicationController
 
   def failure
 #   redirect_to new_user_session_path, notice: "Hubo un error con el login, intenta denuevo." comentamos y pasamos parámetros del protocolo omniauth
-    redirect_to new_user_session_path, notice: "No pudimos loguearte. Error: #{params[:error_description]}. Motivo: #{params[:error_reason]}"
+    redirect_to new_user_session_path, notice: "No pudimos loguearte." # Error: #{params[:error_description]}. Motivo: #{params[:error_reason]}"
   end
 
   private

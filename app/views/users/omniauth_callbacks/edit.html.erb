@@ -1,22 +1,27 @@
-<%=form_with "/custom_sign_up", method: :post do |form|%>
-  <ul>
-    <%= @user.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-    <%end%>
-  </ul>
-  <div>
-    <%= form.text_field :username%>
-    <%= form.label :username %>
-  </div>
-  <div>
-    <%= form.email_field :email, require: true %>
-    <%= form.label :email %>
-  </div>
-  <div>
-    <%= form.text_field :name%>
-    <%= form.label :name %>
-  </div>
-  <div>
-    <%= form.submit "Complete the register" %>
-  </div>
-<%end%>
+<div class="col-md-6 mx-auto mb-5">
+  <h2 class="center bold">This is just validation practice</h2>
+  <h2>Just you have to complete the username field</h2>
+    <%=form_tag "/custom_sign_up", method: :post do %>
+        <div class="form-group row">
+          <ul>
+            <%= @user.errors.full_messages.each do |error| %>
+              <li><%= error %></li>
+            <%end%>
+          </ul>
+        </div>
+        <div class="form-group row">
+          <%= label_tag "user_username" %>
+          <%= text_field_tag "user[username]", @user.username, class:"form-control" %>
+        </div>
+        <div class="form-group row">
+          <%= label_tag "user_email" %>
+          <%= email_field_tag "user[email]", @user.email, require: true, class:"form-control" %>
+        </div>
+        <div class="form-group row">
+          <%= label_tag "user_name" %>
+          <%= text_field_tag "user[name]", @user.name, class:"form-control" %>
+        </div>
+        <div class="form-group row">
+          <%= submit_tag ("Complete the register"), class:"btn btn-success" %>
+        </div>
+      <%end%>
