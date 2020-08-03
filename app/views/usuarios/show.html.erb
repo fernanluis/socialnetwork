@@ -1,8 +1,8 @@
 <br>
 <div class="col-md-6 mx-auto mb-5">
   <div class="container p-3 mb-2 bg-success text-white rounded">
-  <!--%= (image_tag @user.image.url, class:"rounded-circle border border-secondary") if @user.image?%><br>
-  --> <%= @user.username%>
+  <%= (image_tag @user.image.url, class:"rounded-circle border border-secondary") if @user.image?%><br>
+    <%= @user.username%>
       <h4>
         <%= @user.name%>
         <%= @user.last_name%>

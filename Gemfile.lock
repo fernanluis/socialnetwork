@@ -183,6 +183,7 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     popper_js (1.16.0)
     public_suffix (4.0.5)
     puma (4.3.5)
@@ -275,7 +276,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     temple (0.8.2)
     thor (1.0.1)
     thread_safe (0.3.6)
@@ -326,6 +326,7 @@ DEPENDENCIES
   listen (~> 3.2)
   mini_magick
   omniauth-facebook
+  pg
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.1)
   rspec-rails
@@ -334,7 +335,6 @@ DEPENDENCIES
   shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.4)
   turbolinks (~> 5.2.0)
   tzinfo-data
   web-console (>= 3.3.0)
