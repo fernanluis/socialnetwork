@@ -24,7 +24,7 @@ gem 'turbolinks', '~> 5.2.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Escribir vistas sin cerrar las etiquetas
-gem 'haml-rails'
+# gem 'haml-rails'
 # Autenticación
 gem 'devise'
 #Protocolo para permisos de autenticación
@@ -36,6 +36,10 @@ gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Con MiniMagick, la memoria de procesos de ruby ​​sigue siendo pequeña..
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
+# AASM for state machines
+gem 'aasm'
+# Draper para nuestro decorators
+gem 'draper'
 # Best in place for better edit form
 # gem 'best_in_place', '~> 3.0.1'
 # Use Redis adapter to run Action Cable in production

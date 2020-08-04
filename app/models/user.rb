@@ -27,6 +27,7 @@ class User < ApplicationRecord
          :omniauth_providers => [:facebook]
 
   validate :picture_size # el método ' picture_size ' en los requisitos de validación para el modelo de Usuario .
+
   # Username no puede ser nulo ni estar vacío porque no pasaría la validación.
   # Campo username va a ser único a través de toda la tabla.
   validates :username, presence: true, uniqueness: true, length: {in: 3..12}

@@ -12,17 +12,17 @@ default: &default
 
 development:
   <<: *default
-  database: db/socialnetwork_development
+  database: social_network_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/socialnetwork_test
+  database: social_network_test
 
 production:
   <<: *default
-  database: db/socialnetwork_production
-  username: socialnetwork
-  password: <%= ENV['SOCIALNETWORK_DATABASE_PASSWORD'] %>
+  database: social_network_production
+  username: social_network
+  password: <%= ENV['SOCIAL_NETWORK_DATABASE_PASSWORD'] %>

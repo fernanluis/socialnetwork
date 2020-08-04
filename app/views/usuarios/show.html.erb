@@ -8,10 +8,16 @@
         <%= @user.last_name%>
       </h4>
       <h4>
-  <!--    <-%unless @are_friends%>
-      	<-%= button_to friendships_path(friend_id: @user.id), method: :post, remote: true, :"data-type" => "script", class:"btn btn-primary"%>
-      <-%end%>
-  -->
+<!--<div class="col-auto p-0 px-1"></div-->
+<!-- <div class="col-auto p-0"-->
+<!--   <button class= "btn btn-pending shadow" data-toggle="modal" data-target="#decisionModal"-->
+<!--     <i class="fas fa-user-friends"></i> Send Request-->
+<!--   </button-->
+<!-- </div-->
+<!--</div-->
+    <% unless @are_friends %>
+      	<%= button_to friendship_path(friend_id: @user.id), method: :post, remote: true, :"data-type" => "script", class:"btn btn-primary" %>
+    <% end %>
   </div>
   <div class="container p-3 mb-2 bg-success text-white rounded">
     <h4>
