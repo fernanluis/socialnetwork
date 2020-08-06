@@ -7,7 +7,7 @@
     <%= link_to 'New Post', new_post_path, class:"btn btn-outline-primary" %>
     <br>
     <br>
-  <div class="container p-3 mb-2 bg-success rounded">
+  <div class="container p-3 mb-2 bg-dark rounded text-light">
     <table style="width:100%">
       <thead>
         <tr align="center">
@@ -21,9 +21,9 @@
           <tr align="center">
             <td><br><i><%= post.body %></i></td>
             <td><br><i><small><%= post.user.email %></small></i></td>
-            <td><br><%= link_to 'Show', post, class:"btn btn-outline-primary" %></td>
-            <td><br><%= link_to 'Edit', edit_post_path(post), class:"btn btn-outline-primary" %></td>
-            <td><br><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-primary"%></td>
+            <td><br><%= link_to 'Show', post, class:"btn btn-outline-danger text-light" %></td>
+            <td><br><%= link_to 'Edit', edit_post_path(post), class:"btn btn-outline-info text-light" %></td>
+            <td><br><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-success text-light"%></td>
           </tr>
         <%end%>
       <tbody>
