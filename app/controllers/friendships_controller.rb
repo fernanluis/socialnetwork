@@ -1,4 +1,4 @@
-class FriendshipsController < AplicationController
+class FriendshipsController < ApplicationController
   before_action :find_friend
 
   def create
