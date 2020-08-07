@@ -1,17 +1,20 @@
 <div class="col-md-6 mx-auto mb-5">
-  <h2 class="center bold">Sign up</h2>
+  <div class="p-responsive mt-4 mt-md-8"">
+    <div class="text-mono text-center text-gray-light text-normal mb-3">Join</div>
+    <h1 class="d-none d-md-block mt-0 mb-3 text-center h00-mktg lh-condensed-ultra ">Create your account</h1>
+  </div>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|%>
       <%= render "devise/shared/error_messages", resource: resource %>
-      <div class="form-group row">
-        <div class="col">
+        <div class="form-group row">
            <%= f.label :name %>
-           <%= f.text_field :name, class:"form-control col", autofocus: true, autocomplete: "name" %>
-         </div>
-        <div class="col">
+           <%= f.text_field :name, class:"form-control", autofocus: true, autocomplete: "name" %>
+        </div>
+
+        <div class="form-group row">
            <%= f.label :last_name %><br />
-           <%= f.text_field :last_name, class:"form-control col", autofocus: true, autocomplete: "last_name" %>
-         </div>
-      </div>
+           <%= f.text_field :last_name, class:"form-control", autofocus: true, autocomplete: "last_name" %>
+        </div>
+
        <div class="form-group row">
           <%= f.label :email%>
           <%= f.email_field :email, class:"form-control", autofocus: true, required: true%>
@@ -31,17 +34,20 @@
         <div class="form-group row">
           <%= f.label :username%>
           <%= f.text_field :username, class:"form-control", autofocus: true%>
-          </div>
-        <div class="picture form-group">
+        </div>
+        <div class="picture form-group row">
           <%= f.label :upload_your_profile_picture %><br />
           <%= f.file_field :image, class:"form-control", class:"btn btn-outline-primary", accept: 'image/jpeg,image/gif,image/png' %>
         </div>
 
-        <div class="form-group row">
-          <%= f.submit "Registrar", class:"btn btn-primary"%>
+        <div class="actions">
+          <div class="form-group row">
+            <%= f.submit "Create account", class:"form-control btn btn-primary"%>
+          </div>
         </div>
+
         <div class="form-group row">
-           <%= link_to "Ya tengo cuenta", new_user_session_path%>
+           <%= link_to "Sign in", new_user_session_path, class:"btn btn-outline-primary"%>
         </div>
 
 

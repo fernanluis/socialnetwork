@@ -1,5 +1,7 @@
 <div class="col-md-6 mx-auto mb-5">
-  <h2 class="center bold">Iniciar Sesión</h2>
+  <div class="p-responsive mt-4 mt-md-8"">
+    <h2 class="d-none d-md-block mt-0 mb-3 text-center h00-mktg lh-condensed-ultra">Sign in to Site</h2>
+  </div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|%>
     <div class="form-group">
       <%= f.label :email%><br/>
@@ -17,9 +19,12 @@
     <% end %>
 
     <div class="actions">
-      <%= f.submit "Log in", class:"btn btn-primary" %>
+      <div class="form-group">
+        <%= f.submit "Sign in", class:"form-control btn btn-primary"%>
+      </div>
     </div>
     <% end %>
-
-    <%= render "devise/shared/links"%>
+    <p class="create-account-callout mt-3"> New to site? Create your account.
+      <%= render "devise/shared/links"%>
+    </p>
   </div>

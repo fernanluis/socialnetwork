@@ -59,8 +59,8 @@ class User < ApplicationRecord
   private
   def validate_username_regex
     unless username =~ /\A[a-zA-Z]*[a-zA-Z][a-zA-Z0-9_]*\z/
-      errors.add(:username, "El username debe iniciar con una letra")
-      errors.add(:username, "El username sólo puede contener _, letras y números.")
+      errors.add(:username, "The username must starts with an letter")
+      errors.add(:username, "The username only can container _, letters and numbers.")
     end
   end
 
