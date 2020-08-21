@@ -1,15 +1,16 @@
 <br>
 <div class="col-md-6 mx-auto mb-5">
   <div class="container p-3 mb-2 bg-dark text-white rounded">
-  <%= (image_tag @user.image.url, class:"rounded-circle border border-secondary") if @user.image?%><br>
-    <%= @user.username%>
-      <h4>
-        <%= @user.name%>
-        <%= @user.last_name%>
-      </h4>
-      <h4>
-        <div class="col-auto p-0 px-1">
-          <div class="col-auto p-0">
+    <div class="col-auto p-0 px-1">
+      <div class="col-auto p-0">
+        <div class="">
+                  <%= @user.image if @user.image?%>          
+        </div>
+
+        <%= @user.username%>
+        <%= @user.name %>
+        <%= @user.last_name %>
+
             <button class= "btn btn-dark shadow" data-toggle="modal" data-target="#decisionModal">
               <i class="fas fa-user-friends"></i> Send Request
             </button>
@@ -20,16 +21,19 @@
     <!% end %>
     -->
   </div>
+
   <div class="container p-3 mb-2 bg-dark text-white rounded">
+
     <h4>
     Publicaciones:
       <%= @user.posts.count%>
     </h4>
-    <h4>
+      <h4>
     Bio:
       <%= @user.bio%>
   </div>
 </div>
+
 <div class="col-md-6 mx-auto mb-5">
     <%= form_with model: @user, local: true do |form| %>
     <div class="form-group row">

@@ -1,33 +1,33 @@
 <nav class="navbar bg-dark">
   <div class= "col-auto">
-    <%= link_to href="https://github.com/fernanluis/socialnetwork", class: "text-light nav-link font-raleway" do%>
-      <i class="fab fa-github-alt fa-2x"></i> GitHub
+    <%= link_to href="https://github.com/fernanluis/socialnetwork", class: "text-light" do%>
+      <i class="fab fa-github-alt fa-2x"></i>
     <%end%>
   </div>
   <div class= "col-auto">
-    <%= link_to href="https://www.linkedin.com/in/luisfernandoramos1986/", class: "text-light nav-link font-raleway" do%>
-      <i class="fab fa-linkedin-in fa-2x"></i> LinkedIn
+    <%= link_to href="https://www.linkedin.com/in/luisfernandoramos1986/", class: "text-light" do%>
+      <i class="fab fa-linkedin-in fa-2x"></i>
     <%end%>
   </div>
-  <div class= "col-auto">
-    <%= link_to new_user_registration_path, class: "text-light nav-link font-raleway" do%>
-      <i class="fas fa-user-slash fa-2x"></i> Unregistered
+  <div class= "col-auto ml-auto">
+    <%= link_to new_user_registration_path, class: "text-light" do%>
+     Unregistered
     <%end%>
   </div>
   <% if user_signed_in? %>
   <div class= "col-auto">
-    <%= link_to posts_path, class: "text-light nav-link font-raleway" do%>
-      <i class="fas fa-newspaper fa-2x"></i> Posts
+    <%= link_to posts_path, class: "text-light" do%>
+     Posts
     <%end%>
   </div>
   <div class= "col-auto">
-    <%= link_to root_path, class: "text-light nav-link font-raleway" do%>
-      <i class="fas fa-home fa-2x"></i> Home
+    <%= link_to root_path, class: "text-light" do%>
+     Home
     <%end%>
   </div>
   <div class= "col-auto">
-    <%= link_to destroy_user_session_path, method: :delete, class: "text-light nav-link font-raleway" do%>
-      <i class="fas fa-sign-out-alt fa-2x"></i> Log out
+    <%= link_to destroy_user_session_path, method: :delete, class: "text-light" do%>
+     Log out
     <%end%>
   </div>
   <% end %>
