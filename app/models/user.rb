@@ -34,6 +34,9 @@ class User < ApplicationRecord
   validate :validate_username_regex
 
   has_many :posts # Generamos la relación uno a muchos.
+  has_many :comments
+  has_many :likes, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
   def self.from_omniauth(auth)
     where(provider: auth[:provider], uid: auth[:uid]).first_or_create do |user|

@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  resources :posts
+
+  resources :posts do
+    resources :likes, only: %i[create]
+  end
+
+  resources :comments, only: %i[new create destroy] do
+   resources :likes, only: %i[create]
+  end
+
   resources :usuarios, as: :users, only: [:show, :update]
   resources :friendships, only: [:create, :update]
 

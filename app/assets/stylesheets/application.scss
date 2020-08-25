@@ -12,6 +12,6 @@
  *
  *= require colors
  *= require common
- *= require main
- *= require_self
+ @import "bootstrap";
+ @import "custom";
  */
