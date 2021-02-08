@@ -34,7 +34,7 @@ gem 'bootstrap', '~> 4.5.0'
 # Anota modelos Rails / ActiveRecord, rutas, accesorios y otros según el esquema de la base de datos.
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Con MiniMagick, la memoria de procesos de ruby ​​sigue siendo pequeña..
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'mini_magick'
 # AASM for state machines
 gem 'aasm'
